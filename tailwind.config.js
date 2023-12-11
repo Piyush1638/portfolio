@@ -6,12 +6,18 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    fontFamily: {
+      poppins: ["Poppins"],
+      montserrat: ["Montserrat"],
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+      colors:{
+        primary:"#1d1f23",
+        secondary:"#252729",
+        lightPurple: "#7a6be1",
+        textPurple: "#6547bd",
+        textPink: "#ad76b1",
+      }
     },
   },
   plugins: [],
