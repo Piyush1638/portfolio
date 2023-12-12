@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {motion} from "framer-motion";
 
 const Education_Certifications = ({ duration, course, organization }) => (
   <div className="flex flex-col gap-2 bg-secondary p-6 rounded-lg">
@@ -16,9 +17,13 @@ const About = () => {
   const [showEducation, setShowEducation] = useState(true);
   const [showCertifications, setShowCertifications] = useState(false);
   return (
-    <section
+    <motion.section
       id="about"
       className=" min-h-[600px] bg-transparent w-full my-10 border-b-2 border-slate-400 pb-10"
+      initial={{ opacity: 0, scale: 0 }}
+      whileInView={{ opacity: 1, scale:1 }}
+      transition={{ duration: 0.5 }}
+      viewport={{once:true}}
     >
       <h1 className="sm:text-4xl text-center text-3xl font-semibold font-montserrat text-white my-10">
         About Me
@@ -125,7 +130,7 @@ const About = () => {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

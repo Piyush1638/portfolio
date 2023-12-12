@@ -1,4 +1,3 @@
-"use client";
 import { useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
