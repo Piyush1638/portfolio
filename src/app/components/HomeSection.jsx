@@ -7,10 +7,10 @@ const HomeSection = () => {
       <span className="w-[100px] h-[100px] bg-lightPurple rounded-full absolute  top-40 left-40 blur-3xl" />{" "}
       <div className="gap-4 flex flex-col items-center justify-center">
         <h1 className="text-center font-semibold sm:text-5xl text-3xl font-poppins text-white">
-          Hi👋, I'm Piyush Kumar Singh
+          Hi👋, I&apos;m Piyush Kumar Singh
         </h1>
         <h1 className="text-center sm:text-5xl text-3xl font-bold font-montserrat bg-gradient-to-r from-textPurple to-textPink bg-clip-text text-transparent">
-          I,m Full Stack Web & Blockchain Developer
+          I&apos;m Full Stack Web & Blockchain Developer
         </h1>
         <p className="text-slate-400">
           Beautifully Crafting Ideas Into Web Apps

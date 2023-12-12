@@ -19,7 +19,7 @@ const Skills = () => {
       <p className="text-slate-300 text-base text-justify font-montserrat">
         Armed with a versatile toolkit, I specialize in an array of technologies
         and frameworks that empower me as a Full Stack Web Developer and
-        Blockchain maestro. Whether it's architecting scalable web solutions or
+        Blockchain maestro. Whether it&apos;s architecting scalable web solutions or
         delving into the decentralized realm of blockchain, I thrive on
         transforming ideas into tangible, impactful creations.
       </p>

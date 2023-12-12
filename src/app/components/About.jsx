@@ -37,12 +37,12 @@ const About = () => {
               2 years of hands-on experience in Web Development and Blockchain
               enthusiasm
             </span>
-            , I'm a tech enthusiast based in vibrant India. My passion for
+            , I&apos;m a tech enthusiast based in vibrant India. My passion for
             learning fuels my journey across diverse technologies and domains.
             Exploring new tech frontiers is my forte, and I love leveraging
             these discoveries to tackle real-world challenges. <br /> <br />
-            🌐 Currently immersed in the world of Web Development, I'm not just
-            coding; I'm crafting experiences. Backed by a solid foundation built
+            🌐 Currently immersed in the world of Web Development, I&apos;m not just
+            coding; I&apos;m crafting experiences. Backed by a solid foundation built
             over 2 years, my devotion to refining Data Structures and Algorithms
             is a testament to my commitment to mastering the craft.
           </p>
