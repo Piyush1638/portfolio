@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const FlipCard = ({
   name,
@@ -19,9 +20,11 @@ const FlipCard = ({
     >
       <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
         <div className="absolute backface-hidden md:h-full h-fit w-full rounded-3xl">
-          <img
+          <Image
             src={imageUrl}
             alt="Project1"
+            height={100}
+            width={100}
             className="h-full w-full object-contain rounded-sm"
           />
         </div>
@@ -40,25 +43,27 @@ const FlipCard = ({
             </p>
             <div className="flex gap-2 mt-5 items-center justify-center text-center scale-0 group-hover:scale-100 duration-1000 delay-500">
               <Link
-                className="bg-primary md:p-4 p-3 rounded-lg"
+                className="bg-primary hover:bg-textPurple md:p-4 p-3 rounded-lg"
                 href={github}
                 target="blank"
               >
-                <img
+                <Image
                   src="/github.svg"
                   alt="Github"
-                  className="h-[50px] w-[50px]"
+                  height={50}
+                  width={50}
                 />
               </Link>
               <Link
-                className="bg-primary md:p-4 p-3 rounded-lg"
+                className="bg-primary hover:bg-textPurple md:p-4 p-3 rounded-lg"
                 href={deployment}
                 target="blank"
               >
-                <img
+                <Image
                   src="/view.png"
                   alt="Deployment"
-                  className="h-[50px] w-[50px]"
+                  height={50}
+                  width={50}
                 />
               </Link>
             </div>

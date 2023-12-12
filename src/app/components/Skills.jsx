@@ -23,7 +23,7 @@ const Skills = () => {
         delving into the decentralized realm of blockchain, I thrive on
         transforming ideas into tangible, impactful creations.
       </p>
-      <SkillsDiv />
+      <SkillsDiv/>
     </motion.section>
   );
 };

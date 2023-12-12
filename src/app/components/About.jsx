@@ -1,5 +1,6 @@
 import { useState } from "react";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Education_Certifications = ({ duration, course, organization }) => (
   <div className="flex flex-col gap-2 bg-secondary p-6 rounded-lg">
@@ -21,9 +22,9 @@ const About = () => {
       id="about"
       className=" min-h-[600px] bg-transparent w-full my-10 border-b-2 border-slate-400 pb-10"
       initial={{ opacity: 0, scale: 0 }}
-      whileInView={{ opacity: 1, scale:1 }}
+      whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      viewport={{once:true}}
+      viewport={{ once: true }}
     >
       <h1 className="sm:text-4xl text-center text-3xl font-semibold font-montserrat text-white my-10">
         About Me
@@ -31,7 +32,7 @@ const About = () => {
       <div className="flex mf:flex-row  flex-col-reverse items-center justify-center w-full relative mb-10 gap-5">
         <div className="flex flex-col  mf:w-1/2 gap-5">
           <p className="text-slate-300 text-base text-justify font-montserrat">
-            🚀 Hello there! With over{" "}
+            🚀 Hello there! With over
             <span className="text-white">
               2 years of hands-on experience in Web Development and Blockchain
               enthusiasm
@@ -123,10 +124,13 @@ const About = () => {
           <span className="w-[100px] sm:block hidden  h-[100px] bg-lightPurple rounded-full -z-10 absolute blur-sm bottom-10 md:left-1 lg:left-20 left-0  animate-pulse" />
           <span className="w-[20px] sm:block hidden  h-[20px] bg-lightPurple rounded-full  absolute blur-sm top-0 left-40 animate-pulse" />
 
-          <img
+          <Image
             className="sm:rounded-lg rounded-full aspect-auto object-contain sm:shadow-2xl"
             src="/sampleImage.png"
             alt="Piyush Kumar Singh"
+            height={500}
+            width={500}
+
           />
         </div>
       </div>

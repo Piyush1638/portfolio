@@ -1,6 +1,8 @@
 import {motion} from "framer-motion";
 import Link from "next/link";
 
+import Image from "next/image";
+
 const ContactMe = () => {
   return (
     <motion.section
@@ -60,9 +62,9 @@ const ContactMe = () => {
 
       <div className="flex items-center justify-center">
         <div className="flex items-center justify-center gap-3">
-          <Link href="https://github.com/Piyush1638/" className=" hover:scale-150 duration-500 ease-linear" target="blank"><img src="/github.svg" alt="github" className="h-[50px] w-[50px]" /></Link>
-          <Link href="https://www.linkedin.com/in/piyush-kumar-singh-377112231/" className=" hover:scale-150 duration-500 ease-linear" target="blank"><img src="/socialLinkedin.png" alt="LinkedIn" className="h-[50px] w-[50px]" /></Link>
-          <Link href="https://www.instagram.com/_piyush_singh_002/" className=" hover:scale-150 duration-500 ease-linear" target="blank"><img src="/instagram.png" alt="Instagram" className="h-[50px] w-[50px]" /></Link>
+          <Link href="https://github.com/Piyush1638/" className=" hover:scale-150 duration-500 ease-linear" target="blank"><Image src="/github.svg" alt="github" height={50} width={50}/></Link>
+          <Link href="https://www.linkedin.com/in/piyush-kumar-singh-377112231/" className=" hover:scale-150 duration-500 ease-linear" target="blank"><Image src="/socialLinkedin.png" alt="LinkedIn" height={50} width={50} /></Link>
+          <Link href="https://www.instagram.com/_piyush_singh_002/" className=" hover:scale-150 duration-500 ease-linear" target="blank"><Image src="/instagram.png" alt="Instagram" height={50} width={50} /></Link>
         </div>
       </div>
     </motion.section>

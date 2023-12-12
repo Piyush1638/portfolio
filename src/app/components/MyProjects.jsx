@@ -1,8 +1,9 @@
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 import FlipCard from "./FlipCard";
 
 import { projects } from "../constants/constants";
 import Link from "next/link";
+import Image from "next/image";
 
 const MyProjects = () => {
   return (
@@ -10,14 +11,14 @@ const MyProjects = () => {
       id="my-works"
       className="min-h-[600px] bg-transparent w-full my-10 border-b-2 border-slate-400 pb-10"
       initial={{ opacity: 0, scale: 0 }}
-      whileInView={{ opacity: 1, scale:1 }}
+      whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
-      viewport={{once:true}}
+      viewport={{ once: true }}
     >
       <h1 className="sm:text-4xl text-center text-3xl font-semibold font-montserrat text-white my-10">
-        My{" "}
+        My
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-textPurple to-textPink">
-          Projects
+          {" "} Projects
         </span>
       </h1>
       <p className="text-slate-300 text-base text-justify font-montserrat my-10">
@@ -40,10 +41,16 @@ const MyProjects = () => {
           );
         })}
       </div>
-      <h3 className="text-end font-normal my-2 text-slate-400">More works coming soon...</h3>
+      <h3 className="text-end font-normal my-2 text-slate-400">
+        More works coming soon...
+      </h3>
       <div className="flex items-center justify-center my-5">
-        <Link className="bg-transparent text-white font-poppins border-2 hover:bg-gradient-to-r from-textPurple to-textPink border-lightPurple px-4 py-5 rounded-lg flex items-center justify-center gap-3" href={"https://github.com/Piyush1638?tab=repositories"}>
-          Traverse projects <img src="github.svg" alt="github" height={40} width={40} />
+        <Link
+          className="bg-transparent text-white font-poppins border-2 hover:bg-gradient-to-r from-textPurple to-textPink border-lightPurple px-4 py-5 rounded-lg flex items-center justify-center gap-3"
+          href={"https://github.com/Piyush1638?tab=repositories"}
+        >
+          Traverse projects{" "}
+          <Image src="github.svg" alt="github" height={40} width={40} />
         </Link>
       </div>
     </motion.section>
