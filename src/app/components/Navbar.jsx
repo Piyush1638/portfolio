@@ -40,8 +40,16 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="z-10 h-[100px] bg-transparent flex items-center justify-end">
-      <div className="hidden md:flex flex-row items-center gap-4 justify-evenly p-5 ">
+    <nav
+      className={`z-10 min-h-fit bg-transparent flex ${
+        openMenu && "flex-col-reverse"
+      } text-end md:items-center justify-end`}
+    >
+      <div
+        className={`${
+          openMenu ? "flex border-2 border-textPurple rounded-lg scale-100 transition-transform duration-1000 ease-in" : "hidden"
+        } md:flex md:flex-row flex-col items-center gap-4 p-5 `}
+      >
         {navLinks.map((links) => (
           <a
             key={links.id}
@@ -53,16 +61,16 @@ const Navbar = () => {
         ))}
       </div>
 
-      <span>
+      <span className="flex md:hidden justify-end p-4">
         {!openMenu ? (
           <RxHamburgerMenu
-            className="text-white cursor-pointer md:hidden flex"
+            className="text-white block cursor-pointer md:hidden"
             size="30px"
             onClick={mobileview}
           />
         ) : (
           <IoClose
-            className="text-white cursor-pointer md:hidden flex"
+            className="text-white cursor-pointer md:hidden block"
             size="30px"
             onClick={mobileview}
           />

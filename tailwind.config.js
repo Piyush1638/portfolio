@@ -30,6 +30,9 @@ module.exports = {
       montserrat: ["Montserrat"],
     },
     extend: {
+      screens:{
+        "mf":"1000px",
+      },
       colors:{
         primary:"#1d1f23",
         secondary:"#252729",

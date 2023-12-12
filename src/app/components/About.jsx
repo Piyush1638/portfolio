@@ -28,8 +28,8 @@ const About = () => {
       <h1 className="sm:text-4xl text-center text-3xl font-semibold font-montserrat text-white my-10">
         About Me
       </h1>
-      <div className="flex md:flex-row flex-col-reverse items-center justify-center w-full relative mb-10 gap-5">
-        <div className="flex flex-col  sm:w-1/2 gap-5">
+      <div className="flex mf:flex-row  flex-col-reverse items-center justify-center w-full relative mb-10 gap-5">
+        <div className="flex flex-col  mf:w-1/2 gap-5">
           <p className="text-slate-300 text-base text-justify font-montserrat">
             🚀 Hello there! With over{" "}
             <span className="text-white">
@@ -71,9 +71,9 @@ const About = () => {
               </button>
             </div>
             {showEducation && (
-              <div className="border-2 border-lightPurple rounded-md w-full p-10">
+              <div className="md:border-2 md:border-lightPurple rounded-md w-full p-10">
                 <div className="flex flex-col gap-3">
-                  <h1 className="text-white font-semibold font-montserrat text-xl">
+                  <h1 className="md:flex hidden text-white font-semibold font-montserrat text-xl">
                     Education
                   </h1>
                   <div className="flex flex-col gap-3">
@@ -98,9 +98,9 @@ const About = () => {
             )}
 
             {showCertifications && (
-              <div className="border-2 border-lightPurple rounded-md w-full p-10">
+              <div className="md:border-2 md:border-lightPurple rounded-md w-full p-10">
                 <div className="flex flex-col gap-3">
-                  <h1 className="text-white font-semibold font-montserrat text-xl">
+                  <h1 className="text-white md:flex hidden font-semibold font-montserrat text-xl">
                     Cetifications
                   </h1>
                   <Education_Certifications
