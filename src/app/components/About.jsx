@@ -29,7 +29,7 @@ const About = () => {
           <p className="text-slate-300 text-base text-justify font-montserrat">
             🚀 Hello there! With over
             <span className="text-white">
-              2 years of hands-on experience in Web Development and Blockchain
+              {" "}2 years of hands-on experience in Web Development and Blockchain
               enthusiasm
             </span>
             , I&apos;m a tech enthusiast based in vibrant India. My passion for
