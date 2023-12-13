@@ -3,22 +3,22 @@ import { IoIosArrowDropright } from "react-icons/io";
 
 const HomeSection = () => {
   return (
-    <section className="flex flex-col justify-center items-center min-h-[600px] border-b-2 border-slate-400">
+    <section className="flex flex-col justify-center items-center  min-h-[600px] border-b-2 border-slate-400">
       <span className="w-[100px] h-[100px] bg-lightPurple rounded-full absolute  top-40 left-40 blur-3xl" />{" "}
       <div className="gap-4 flex flex-col items-center justify-center">
-        <h1 className="text-center font-semibold sm:text-5xl text-3xl font-poppins text-white">
+        <h1 className="text-center px-4 py-3 font-semibold md:text-5xl text-xl font-poppins bg-gradient-to-r from-textPurple to-textPink bg-clip-text text-transparent">
           Hi👋, I&apos;m Piyush Kumar Singh
         </h1>
-        <h1 className="text-center sm:text-5xl text-3xl font-bold font-montserrat bg-gradient-to-r from-textPurple to-textPink bg-clip-text text-transparent">
+        <h3 className="text-center md:text-5xl text-2xl font-bold font-montserrat text-white">
           I&apos;m Full Stack Web & Blockchain Developer
-        </h1>
+        </h3>
         <p className="text-slate-400">
           Beautifully Crafting Ideas Into Web Apps
         </p>
         <button className="bg-lightPurple px-4 py-5 rounded-lg w-fit ">
           <a
             className="flex items-center gap-3 text-white font-montserrat"
-            href="#my-projects"
+            href="#my-works"
           >
             My Projects 
             <span>

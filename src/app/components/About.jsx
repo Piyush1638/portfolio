@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 const Education_Certifications = ({ duration, course, organization }) => (
@@ -18,13 +17,9 @@ const About = () => {
   const [showEducation, setShowEducation] = useState(true);
   const [showCertifications, setShowCertifications] = useState(false);
   return (
-    <motion.section
+    <section
       id="about"
       className=" min-h-[600px] bg-transparent w-full my-10 border-b-2 border-slate-400 pb-10"
-      initial={{ opacity: 0, scale: 0 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: true }}
     >
       <h1 className="sm:text-4xl text-center text-3xl font-semibold font-montserrat text-white my-10">
         About Me
@@ -72,7 +67,7 @@ const About = () => {
               </button>
             </div>
             {showEducation && (
-              <div className="md:border-2 md:border-lightPurple rounded-md w-full p-10">
+              <div className="md:border-2 md:border-lightPurple rounded-md w-full md:p-10">
                 <div className="flex flex-col gap-3">
                   <h1 className="md:flex hidden text-white font-semibold font-montserrat text-xl">
                     Education
@@ -99,7 +94,7 @@ const About = () => {
             )}
 
             {showCertifications && (
-              <div className="md:border-2 md:border-lightPurple rounded-md w-full p-10">
+              <div className="md:border-2 md:border-lightPurple rounded-md w-full md:p-10">
                 <div className="flex flex-col gap-3">
                   <h1 className="text-white md:flex hidden font-semibold font-montserrat text-xl">
                     Cetifications
@@ -134,7 +129,7 @@ const About = () => {
           />
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

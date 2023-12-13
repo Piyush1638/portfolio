@@ -22,9 +22,10 @@ const FlipCard = ({
         <div className="absolute backface-hidden md:h-full h-fit w-full rounded-3xl">
           <Image
             src={imageUrl}
-            alt="Project1"
+            alt={name}
             height={100}
             width={100}
+            quality={75}
             className="h-full w-full object-contain rounded-sm"
           />
         </div>
