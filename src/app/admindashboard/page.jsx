@@ -18,7 +18,8 @@ const Message =
   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime recusandae et, inventore fuga atque beatae culpa voluptas soluta modi officiis? Assumenda aperiam doloribus nihil quas error, enim nulla autem dolorum illo. Atque maiores enim eos, a possimus id soluta porro sequi. Laboriosam quasi rem repudiandae placeat, iste totam ut soluta distinctio mollitia nihil esse eligendi doloribus incidunt architecto illum aperiam nisi. Laudantium facere odio voluptates ea cum, obcaecati, quibusdam cumque similique veniam laboriosam provident tenetur distinctio tempora sapiente asperiores, reprehenderit nisi totam pariatur. Dignissimos, ratione id pariatur voluptatum optio, quod dolor alias quia eaque saepe tempore, explicabo magni. Fuga, inventore?";
 
 const page = () => {
-    const [showOptions, setShowOptions] = useState(false);
+  const [showOptions, setShowOptions] = useState(false);
+  const [showMarkAsRead, setShowMarkAsRead] = useState(false)
   return (
     <main className="bg-gradient-to-r h-full min-h-screen  relative from-[#000000] to-[#434343] md:p-24 p-10">
       <div className="flex flex-col">
@@ -67,10 +68,14 @@ const page = () => {
                 </p>
               </div>
               <div className="flex items-center justify-center relative h-full">
-                <Image src="/more.png" alt="Three-dot" height={20} width={20} />
-                <div className=" p-1 rounded-lg">
-                    <p className="font-montserrat font-bold text-xs p-4 rounded-md text-white bg-primary absolute bottom-0">Mark as Read</p>
-                </div>
+                <Image className="cursor-pointer" onClick={()=>setShowMarkAsRead(!showMarkAsRead)} src="/more.png" alt="Three-dot" height={20} width={20} />
+                {showMarkAsRead && (
+                  <div className=" p-1 rounded-lg">
+                    <p className="font-montserrat font-bold text-xs p-4 rounded-md text-white bg-primary absolute bottom-0">
+                      Mark as Read
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
