@@ -1,14 +1,17 @@
 "use client";
-import Navbar from "./components/Navbar";
-import HomeSection from "./components/HomeSection";
-import About from "./components/About";
-import Skills from "./components/Skills";
+import Navbar from "@/components/Navbar";
+import HomeSection from "@/components/HomeSection";
+import Link from "next/link";
+import About from "@/components/About";
+import Skills from "@/components/Skills";
+import Image from "next/image";
 
 import { motion, useScroll } from "framer-motion";
-import MyProjects from "./components/MyProjects";
-import ContactMe from "./components/ContactMe";
+import MyProjects from "@/components/MyProjects";
+import ContactMe from "@/components/ContactMe";
+import Footer from "@/components/Footer";
 
-export default function Home() {
+const Home = () => {
   const { scrollYProgress } = useScroll();
 
   return (
@@ -24,8 +27,8 @@ export default function Home() {
           right: 0,
           left: 0,
           height: 5,
-          background:"#6547bd",
-          zIndex:"100"
+          background: "#6547bd",
+          zIndex: "100",
         }}
       />
       <div className="p-3 z-10 bg-transparent flex flex-col gap-5">
@@ -41,11 +44,16 @@ export default function Home() {
         <Skills />
 
         {/* My Projects Section */}
-        <MyProjects/>
+        <MyProjects />
 
         {/* Contact Me Section */}
-        <ContactMe/>
+        <ContactMe />
       </div>
+      
+      {/* Footer */}
+      <Footer/>
     </main>
   );
-}
+};
+
+export default Home;

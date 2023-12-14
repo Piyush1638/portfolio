@@ -22,7 +22,7 @@ const About = () => {
       className=" min-h-[600px] bg-transparent w-full my-10 border-b-2 border-slate-400 pb-10"
     >
       <h1 className="sm:text-4xl text-center text-3xl font-semibold font-montserrat text-white my-10">
-        About Me
+        About <span className="text-transparent bg-clip-text bg-gradient-to-r from-textPurple to-textPink">Me</span>
       </h1>
       <div className="flex mf:flex-row  flex-col-reverse items-center justify-center w-full relative mb-10 gap-5">
         <div className="flex flex-col  mf:w-1/2 gap-5">
@@ -114,18 +114,17 @@ const About = () => {
             )}
           </div>
         </div>
-        <div className="flex sm:w-1/2 bg-transparent z-10 items-center justify-center relative sm:my-0 my-10">
-          <span className="w-[50px] sm:block hidden  h-[50px] bg-lightPurple rounded-full -z-10 absolute blur-sm top-20 right-20 animate-pulse" />
-          <span className="w-[100px] sm:block hidden  h-[100px] bg-lightPurple rounded-full -z-10 absolute blur-sm bottom-10 md:left-1 lg:left-20 left-0  animate-pulse" />
-          <span className="w-[20px] sm:block hidden  h-[20px] bg-lightPurple rounded-full  absolute blur-sm top-0 left-40 animate-pulse" />
+        <div className="flex sm:w-1/2 bg-transparent  z-10 items-center justify-center relative sm:my-0 my-10">
+          <span className="w-[50px] sm:block  h-[50px] bg-lightPurple rounded-full -z-10 absolute blur-sm sm:top-20 sm:right-20 top-0 right-5 animate-pulse" />
+          <span className="md:w-24 sm:block  md:h-24 sm:h-16 sm:w-16 w-20 h-20 bg-lightPurple rounded-full md:z-10 -z-10  absolute blur-sm sm:bottom-10 bottom-0 md:left-1 lg:left-20 left-0  animate-pulse" />
+          <span className="w-[30px] sm:block hidden  h-[30px] bg-lightPurple rounded-full  absolute blur-sm top-0 left-40 animate-pulse" />
 
           <Image
-            className="sm:rounded-lg rounded-full aspect-auto object-contain sm:shadow-2xl"
-            src="/sampleImage.png"
+            className="sm:rounded-lg p-10 rounded-full  aspect-auto object-contain sm:shadow-2xl"
+            src="/ProfilePic-removebg-preview.png"
             alt="Piyush Kumar Singh"
-            height={500}
+            height={300}
             width={500}
-
           />
         </div>
       </div>

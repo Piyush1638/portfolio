@@ -1,6 +1,6 @@
 import FlipCard from "./FlipCard";
 
-import { projects } from "../constants/constants";
+import { projects } from "@/constants/constants";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -20,7 +20,7 @@ const MyProjects = () => {
         I am a passionate developer who loves to build new things. Here are some
         of my projects that I have worked on.
       </p>
-      <div className="grid  lg:grid-cols-2 grid-cols-1 md:gap-5 gap-2">
+      <div className="grid lg:grid-cols-2 grid-cols-1 md:gap-5 gap-2">
         {projects.map((project) => {
           return (
             <FlipCard

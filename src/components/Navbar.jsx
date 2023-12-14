@@ -47,7 +47,7 @@ const Navbar = () => {
     >
       <div
         className={`${
-          openMenu ? "flex border-2 border-textPurple rounded-lg scale-100 transition-transform duration-1000 ease-in" : "hidden"
+          openMenu ? "flex border-2 border-textPurple rounded-lg" : "hidden"
         } md:flex md:flex-row flex-col items-center gap-4 p-5 `}
       >
         {navLinks.map((links) => (

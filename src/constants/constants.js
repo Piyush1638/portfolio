@@ -32,7 +32,7 @@ export const projects = [
         description: "A dedicated website for the GeeksforGeeks Student Chapter at Chandigarh University. As the Frontend Team Leader, I contributed to the design and development of the site, ensuring a user-friendly interface and seamless navigation. The website serves as a platform for students to access resources, updates, and events related to the chapter.",
         techStack: ["React", "Tailwind CSS", "JavaScript"],
         github: "https://github.com/Piyush1638/gfgcu",
-        deployment: "https://gfgcu.vercel.app/competitions",
+        deployment: "https://gfgcu.vercel.app",
         imageUrl: "/gfgcu.png",
     }
 ]

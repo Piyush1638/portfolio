@@ -9,7 +9,7 @@ const Skills = () => {
       className="min-h-[600px] bg-transparent w-full my-10 border-b-2 border-slate-400 pb-10"
     >
       <h1 className="sm:text-4xl text-center text-3xl font-semibold font-montserrat text-white my-10">
-        Skills
+      My <span className="text-transparent bg-clip-text bg-gradient-to-r from-textPurple to-textPink">Skills</span>
       </h1>
       <p className="text-slate-300 text-base text-justify font-montserrat">
         Armed with a versatile toolkit, I specialize in an array of technologies

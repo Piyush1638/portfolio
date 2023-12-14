@@ -35,7 +35,7 @@ const SkillsDiv = () => {
         alt="Next.js"
         height={50} 
         width={50}
-        className="sm:h-[100px] sm:w-[100px] animate-pulse"
+        className="sm:h-[100px] sm:w-[100px] w-auto animate-pulse"
       />
       <Image
         src="/tailwind.png"
