@@ -28,6 +28,7 @@ const ContactMe = () => {
       message: message,
       receivedAt: today,
       markedAsRead: false,
+      lastMessageRecieved:today,
     };
 
     try {
@@ -48,6 +49,8 @@ const ContactMe = () => {
 
         await updateDoc(userDocRef, {
           messages: updatedMessages,
+          markedAsRead: false,
+          lastMessageRecieved: today,
         });
       } else {
         await setDoc(userDocRef, {
@@ -61,6 +64,7 @@ const ContactMe = () => {
             },
           ],
           markedAsRead: formData.markedAsRead,
+          lastMessageRecieved: today,
         });
       }
 
