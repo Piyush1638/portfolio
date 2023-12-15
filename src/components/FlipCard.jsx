@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { motion } from "framer-motion";
 import Image from "next/image";
+import { MotionDiv } from "./MotionDiv";
 
 const FlipCard = ({
   name,
@@ -11,7 +11,7 @@ const FlipCard = ({
   imageUrl,
 }) => {
   return (
-    <motion.div
+    <MotionDiv
       className="w-full h-[420px] bg-transparent  rounded-2xl   cursor-pointer group perspective"
       initial={{ opacity: 0, scale: 0 }}
       whileInView={{ opacity: 1, scale: 1 }}
@@ -75,7 +75,7 @@ const FlipCard = ({
           </div>
         </div>
       </div>
-    </motion.div>
+    </MotionDiv>
   );
 };
 

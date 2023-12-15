@@ -1,51 +1,87 @@
+"use client";
 import { useState } from "react";
 import { db } from "@/firebaseConfig";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, setDoc, getDoc, updateDoc } from "firebase/firestore";
+import Image from "next/image";
 
 const ContactMe = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState(" ");
 
   const [sending, setSending] = useState(false);
   const [messageSent, setMessageSent] = useState(false);
   const [status, setStatus] = useState("");
 
-  const { name, email, subject, message } = formData;
-
-  const onChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
   const submit = async (e) => {
     e.preventDefault();
     setSending(true);
-    // Generate a unique identifier from the email
-    const uniqueId = formData.email.replace(/[@.]/g, "");
 
-    var today = new Date();
-    const formDataCopy = {
-      ...formData,
-      createdAt: today.toLocaleString(),
+    const uniqueId = email.replace(/[@.]/g, "");
+    const today = new Date().toLocaleString();
+
+    const formData = {
+      name: name,
+      email: email,
+      subject: subject,
+      message: message,
+      receivedAt: today,
+      markedAsRead: false,
     };
 
     try {
-      // Use the uniqueId as part of the document path
-      await setDoc(doc(db, "messages", uniqueId), formDataCopy);
+      const userDocRef = doc(db, "messages", uniqueId);
+      const userDocSnap = await getDoc(userDocRef);
+
+      if (userDocSnap.exists()) {
+        const userData = userDocSnap.data();
+        const messagesArray = userData.messages || [];
+        const updatedMessages = [
+          ...messagesArray,
+          {
+            subject: formData.subject,
+            message: formData.message,
+            receivedAt: formData.receivedAt,
+          },
+        ];
+
+        await updateDoc(userDocRef, {
+          messages: updatedMessages,
+        });
+      } else {
+        await setDoc(userDocRef, {
+          name: formData.name,
+          email: formData.email,
+          messages: [
+            {
+              subject: formData.subject,
+              message: formData.message,
+              receivedAt: formData.receivedAt,
+            },
+          ],
+          markedAsRead: formData.markedAsRead,
+        });
+      }
+
       console.log("Message stored successfully");
+
+      setName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+
       setSending(false);
       setMessageSent(true);
       setStatus("Message Sent Successfully!");
-      // Hidding the message sent information
+
       setTimeout(() => {
         setMessageSent(false);
       }, 5000);
     } catch (error) {
       setSending(false);
       setMessageSent(true);
+
       setTimeout(() => {
         setMessageSent(false);
       }, 5000);
@@ -54,7 +90,7 @@ const ContactMe = () => {
   };
 
   const Circle = () => (
-    <div className="flex justify-center items-center py-3">
+    <div className="flex justify-center items-center py-2">
       <div className="animate-spin rounded-full h-3 w-3 border-b-2 border-textPink" />
     </div>
   );
@@ -74,8 +110,10 @@ const ContactMe = () => {
         </span>
       </h1>
       <p className="text-center font-poppins font-medium z-10 text-slate-200">
-        Send Message: because carrier pigeons are so last century 🕊️.
+        Contact me: I build software and relationships. Both are bug-free and
+        feature-rich!
       </p>
+
       <div className="flex items-center justify-center my-10 min-h-[400px]">
         <form
           onSubmit={submit}
@@ -89,7 +127,7 @@ const ContactMe = () => {
               name="name"
               value={name}
               required
-              onChange={onChange}
+              onChange={(e) => setName(e.target.value)}
               autoComplete="off"
               className="w-full text-slate-300 p-2 bg-secondary  focus:outline-textPurple rounded-md"
             />
@@ -100,7 +138,8 @@ const ContactMe = () => {
               name="email"
               value={email}
               required
-              onChange={onChange}
+              // onChange={onChange}
+              onChange={(e) => setEmail(e.target.value)}
               autoComplete="off"
               className="w-full text-slate-300 p-2 bg-secondary  focus:outline-textPurple rounded-md"
             />
@@ -111,7 +150,8 @@ const ContactMe = () => {
               name="subject"
               required
               value={subject}
-              onChange={onChange}
+              // onChange={onChange}
+              onChange={(e) => setSubject(e.target.value)}
               autoComplete="off"
               className="w-full text-slate-300  p-2 bg-secondary focus:outline-textPurple rounded-md"
             />
@@ -122,7 +162,7 @@ const ContactMe = () => {
               name="message"
               value={message}
               required
-              onChange={onChange}
+              onChange={(e) => setMessage(e.target.value)}
               autoComplete="off"
               className="w-full text-slate-300 h-4/5 p-2 bg-secondary focus:outline-textPurple rounded-md"
             />
@@ -148,42 +188,17 @@ const ContactMe = () => {
           )}
         </form>
       </div>
-
-      {/* <div className="flex items-center justify-center">
-        <div className="flex items-center justify-center gap-3">
-          <Link
-            href="https://github.com/Piyush1638/"
-            className=" hover:scale-150 duration-500 ease-linear"
-            target="blank"
-          >
-            <Image src="/github.svg" alt="github" height={50} width={50} />
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/piyush-kumar-singh-377112231/"
-            className=" hover:scale-150 duration-500 ease-linear"
-            target="blank"
-          >
-            <Image
-              src="/socialLinkedin.png"
-              alt="LinkedIn"
-              height={50}
-              width={50}
-            />
-          </Link>
-          <Link
-            href="https://www.instagram.com/_piyush_singh_002/"
-            className=" hover:scale-150 duration-500 ease-linear"
-            target="blank"
-          >
-            <Image
-              src="/instagram.png"
-              alt="Instagram"
-              height={50}
-              width={50}
-            />
-          </Link>
-        </div>
-      </div> */}
+      <p className="text-white font-bold font-poppins text-center flex items-center justify-center gap-2">
+        <Image 
+          src="/gmail.png"
+          height={20}
+          width={20}
+          priority
+          alt="Gmail"
+          quality={100}
+        />
+        devpiyush1638@gmail.com
+      </p>
     </section>
   );
 };

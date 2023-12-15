@@ -1,21 +1,9 @@
-import { useState } from "react";
-import Image from "next/image";
 
-const Education_Certifications = ({ duration, course, organization }) => (
-  <div className="flex flex-col gap-2 bg-secondary p-6 rounded-lg">
-    <h1 className="text-white font-semibold font-montserrat md:text-lg text-base flex items-center justify-between">
-      {course}{" "}
-      <span className="md:text-sm text-xs font-poppins text-slate-400">
-        {duration}
-      </span>
-    </h1>
-    <p className="text-slate-300 font-montserrat">{organization}</p>
-  </div>
-);
+import Image from "next/image";
+import Education_Certfication from "./Education_Certfication";
+
 
 const About = () => {
-  const [showEducation, setShowEducation] = useState(true);
-  const [showCertifications, setShowCertifications] = useState(false);
   return (
     <section
       id="about"
@@ -41,78 +29,7 @@ const About = () => {
             over 2 years, my devotion to refining Data Structures and Algorithms
             is a testament to my commitment to mastering the craft.
           </p>
-          <div className="flex flex-col">
-            <div className="flex items-center justify-center gap-3 w-full my-3">
-              <button
-                onClick={(e) => {
-                  setShowEducation(true);
-                  setShowCertifications(false);
-                }}
-                className={`text-white border-2 ${
-                  showEducation ? "bg-textPurple" : "bg-transparent"
-                } border-slate-600 hover:bg-lightPurple px-4 py-3 rounded-lg`}
-              >
-                Education
-              </button>
-              <button
-                onClick={() => {
-                  setShowEducation(false);
-                  setShowCertifications(true);
-                }}
-                className={`text-white border-2 ${
-                  showCertifications ? "bg-textPurple" : "bg-transparent"
-                } border-slate-600 hover:bg-lightPurple px-4 py-3 rounded-lg`}
-              >
-                Certifications
-              </button>
-            </div>
-            {showEducation && (
-              <div className="md:border-2 md:border-lightPurple rounded-md w-full md:p-10">
-                <div className="flex flex-col gap-3">
-                  <h1 className="md:flex hidden text-white font-semibold font-montserrat text-xl">
-                    Education
-                  </h1>
-                  <div className="flex flex-col gap-3">
-                    <Education_Certifications
-                      duration="2021-Present"
-                      course="B.E/B.Tech"
-                      organization="Chandigarh University, Punjab, India"
-                    />
-                    <Education_Certifications
-                      duration="2019-2021"
-                      course="Intermediate"
-                      organization="D.A.V. Paonta Sahib, Sirmaur, Himachal Pradesh, India"
-                    />
-                    <Education_Certifications
-                      duration="2017-2018"
-                      course="High School"
-                      organization="Manas International Public School, Jehanabad, Bihar, India"
-                    />
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {showCertifications && (
-              <div className="md:border-2 md:border-lightPurple rounded-md w-full md:p-10">
-                <div className="flex flex-col gap-3">
-                  <h1 className="text-white md:flex hidden font-semibold font-montserrat text-xl">
-                    Cetifications
-                  </h1>
-                  <Education_Certifications
-                    duration="2023"
-                    course="Blockchain Technology using Ethereum and Polygon"
-                    organization="Metacrafter"
-                  />
-                  <Education_Certifications
-                    duration="2021"
-                    course="An Introduction To Programming Through C++"
-                    organization="NPTEL, India."
-                  />
-                </div>
-              </div>
-            )}
-          </div>
+          <Education_Certfication/>
         </div>
         <div className="flex sm:w-1/2 bg-transparent  z-10 items-center justify-center relative sm:my-0 my-10">
           <span className="w-[50px] sm:block  h-[50px] bg-lightPurple rounded-full -z-10 absolute blur-sm sm:top-20 sm:right-20 top-0 right-5 animate-pulse" />
@@ -125,6 +42,7 @@ const About = () => {
             alt="Piyush Kumar Singh"
             height={300}
             width={500}
+            priority
           />
         </div>
       </div>

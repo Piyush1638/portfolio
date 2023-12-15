@@ -35,7 +35,7 @@ const Footer = () => {
       <p className="text-white flex items-center justify-center">
         ❤️Designed & Developed By
       </p>
-      <p className="text-transparent bg-gradient-to-r from-textPurple to-textPink bg-clip-text font-bold font-poppins text-center">
+      <p className="text-transparent bg-gradient-to-r from-textPurple to-pink-300 bg-clip-text font-bold font-poppins text-center">
         Piyush Kumar Singh
       </p>
     </footer>
