@@ -37,8 +37,8 @@ const About = () => {
           <span className="w-[30px] sm:block hidden  h-[30px] bg-lightPurple rounded-full  absolute blur-sm top-0 left-40 animate-pulse" />
 
           <Image
-            className="sm:rounded-lg p-10 rounded-full  aspect-auto object-contain sm:shadow-2xl"
-            src="/ProfilePic-removebg-preview.png"
+            className="p-10 rounded-full drop-shadow-2xl aspect-auto object-contain sm:shadow-2xl"
+            src="/MyPic-removebg-preview.png"
             alt="Piyush Kumar Singh"
             height={300}
             width={500}
