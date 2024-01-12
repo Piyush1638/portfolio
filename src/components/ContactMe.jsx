@@ -8,7 +8,7 @@ const ContactMe = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState(" ");
+  const [message, setMessage] = useState("");
 
   const [sending, setSending] = useState(false);
   const [messageSent, setMessageSent] = useState(false);
