@@ -10,7 +10,7 @@ const HomeSection = () => {
           Hi👋, I&apos;m Piyush Kumar Singh
         </h1>
         <h3 className="text-center md:text-5xl text-2xl font-bold font-montserrat bg-gradient-to-r from-textPurple  to-textPink bg-clip-text text-transparent">
-          I&apos;m Full Stack Web & Blockchain Developer
+          I&apos;m Full Stack Web Developer
         </h3>
         <p className="text-slate-300 font-semibold font-poppins">
           Beautifully Crafting Ideas Into Web Apps
