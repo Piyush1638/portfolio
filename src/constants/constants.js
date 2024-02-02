@@ -34,5 +34,13 @@ export const projects = [
         github: "https://github.com/Piyush1638/gfgcu",
         deployment: "https://gfgcu.vercel.app",
         imageUrl: "/gfgcu.png",
-    }
+    },{
+        id: 5,
+        name: "Freelance",
+        description: "A Freelance project to develop a website for a client. The website is built using Next.Js, Typescript, Tailwind CSS. The website is a platform for the client to rent cars",
+        techStack: ["Next.js", "Typescript", "Tailwind CSS", "Shadcn"],
+        github: "#",
+        deployment: "https://hulk-car-bg.vercel.app/",
+        imageUrl: "/freelance.png",
+    },
 ]
