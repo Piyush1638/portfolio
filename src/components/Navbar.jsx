@@ -38,6 +38,7 @@ const Navbar = () => {
       href: "#contact",
       text: "Contact",
     },
+
   ];
 
   return (
@@ -54,7 +55,7 @@ const Navbar = () => {
         {navLinks.map((links) => (
           <a
             key={links.id}
-            className="text-white text-sm sm:text-base font-semibold cursor-pointer"
+            className="text-white text-sm sm:text-base font-semibold cursor-pointer hover:text-purple-500 hover:scale-110"
             href={links.href}
           >
             {links.text}

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { IoIosArrowDropright } from "react-icons/io";
 
 
@@ -15,17 +16,15 @@ const HomeSection = () => {
         <p className="text-slate-300 font-semibold font-poppins">
           Beautifully Crafting Ideas Into Web Apps
         </p>
-        <button className="bg-lightPurple px-4 py-5 rounded-lg w-fit ">
-          <a
-            className="flex items-center gap-3 text-white font-montserrat"
-            href="#my-works"
-          >
-            My Projects 
+        <Link  
+        href="https://drive.google.com/file/d/1FjPOXuUPEYqnolJ44rDDCARVyibvYzui/view?usp=sharing" className="bg-lightPurple px-4 py-5 rounded-lg w-fit flex items-center justify-center gap-2 text-slate-50 font-montserrat "
+        target="blank"
+        >
+            My Resume 
             <span>
               <IoIosArrowDropright />
             </span>
-          </a>
-        </button>
+        </Link>
       </div>
     </section>
   );
