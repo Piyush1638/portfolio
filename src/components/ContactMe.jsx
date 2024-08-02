@@ -201,7 +201,7 @@ const ContactMe = () => {
           alt="Gmail"
           quality={100}
         />
-        devpiyush1638@gmail.com
+        piyushkumarsingh665@gmail.com
       </p>
     </section>
   );

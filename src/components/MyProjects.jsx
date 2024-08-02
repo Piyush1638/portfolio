@@ -41,7 +41,7 @@ const MyProjects = () => {
       </h3>
       <div className="flex items-center justify-center my-5">
         <Link
-          className="bg-transparent text-white font-poppins border-2 hover:bg-gradient-to-r from-textPurple to-textPink border-lightPurple px-4 py-5 rounded-lg flex items-center justify-center gap-3"
+          className="bg-transparent text-white font-poppins border-2 hover:bg-gradient-to-r from-textPurple to-textPink border-lightPurple p-2 rounded-lg flex items-center justify-center gap-3"
           href={"https://github.com/Piyush1638?tab=repositories"}
         >
           Traverse projects{" "}

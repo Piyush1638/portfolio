@@ -17,7 +17,7 @@ const HomeSection = () => {
           Beautifully Crafting Ideas Into Web Apps
         </p>
         <Link  
-        href="https://drive.google.com/file/d/1FjPOXuUPEYqnolJ44rDDCARVyibvYzui/view?usp=sharing" className="bg-lightPurple px-4 py-5 rounded-lg w-fit flex items-center justify-center gap-2 text-slate-50 font-montserrat "
+        href="https://drive.google.com/file/d/1CGg0O9LePzFJAbJq2qHqU0g99defmsHN/view" className="bg-lightPurple p-3 rounded-lg w-fit flex items-center justify-center gap-2 text-slate-50 font-montserrat "
         target="blank"
         >
             My Resume 
